@@ -5,8 +5,10 @@
 @import './base/common';
 @import './base/container';
 
-@import './components/page-header';
+@import './components/logo';
+@import './components/main-nav';
 @import './components/button';
+
 
 @import './layout/voting-section';
 @import './layout/breeds-section';
