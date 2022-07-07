@@ -6,10 +6,10 @@
 @import './base/container';
 
 @import './components/logo';
-@import './components/main-nav';
+@import './components/switcher';
 @import './components/button';
 
-
+@import './layout/main-nav-page';
 @import './layout/voting-section';
 @import './layout/breeds-section';
 @import './layout/gallery-section';

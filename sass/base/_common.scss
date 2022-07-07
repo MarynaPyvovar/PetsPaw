@@ -1,11 +1,41 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
     font-family: Jost, sans-serif;
     color: var(--secondary-text-color);
-    background-color: #E5E5E5;
+    background-color: #F8F8F7;
+}
+
+body.night-mode {
+    background-color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 img {

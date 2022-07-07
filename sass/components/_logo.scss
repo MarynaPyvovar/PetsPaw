@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__icon {
+    margin-right: 8px;
+}
+
+.logo__text {
+    @include font(700, 20, 29);
+    letter-spacing: 2px;
+    color: var(--main-text-color);
+}
+
+body.night-mode .logo__text {
+    color: var(--white-color);
+}

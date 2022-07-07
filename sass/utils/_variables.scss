@@ -6,3 +6,9 @@
     --white-color: #ffffff;
     --background-items-color: #F8F8F7;
 }
+
+@mixin font($fw, $fs, $lh) {
+    font-weight: $fw;
+    font-size: $fs+px;
+    line-height: calc(#{$lh} / #{$fs});
+}
