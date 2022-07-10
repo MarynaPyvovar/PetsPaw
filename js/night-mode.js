@@ -1,12 +1,12 @@
 const refs = {
-    toggleBtn: document.querySelector('#toggle'),
-    body: document.body,
+  toggleBtn: document.querySelector('#toggle'),
+  body: document.body,
 };
 
 console.log(refs.toggleBtn);
 
-refs.toggleBtn.addEventListener('click', toggleMode)
+refs.toggleBtn.addEventListener('click', toggleMode);
 
 function toggleMode() {
-    refs.body.classList.toggle('nigth-mode');
+  refs.body.classList.toggle('night-mode');
 }

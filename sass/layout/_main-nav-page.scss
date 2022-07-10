@@ -38,6 +38,10 @@
     @include font(500, 44, 58);
     color: var(--main-text-color);
     margin-bottom: 10px;
+
+    .night-mode & {
+        color: var(--white-color);
+    }
 }
 
 .greetings {
@@ -49,6 +53,10 @@
     @include font(500, 20, 29);
     color: var(--main-text-color);
     margin-bottom: 20px;
+
+    .night-mode & {
+        color: var(--white-color);
+    }
 }
 
 .site-nav__image {

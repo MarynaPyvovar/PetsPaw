@@ -13,11 +13,13 @@ body {
     font-family: Jost, sans-serif;
     color: var(--secondary-text-color);
     background-color: #F8F8F7;
+
+    &.night-mode {
+        background-color: var(--main-text-color);
+    }
 }
 
-body.night-mode {
-    background-color: var(--main-text-color);
-}
+
 
 h1,
 h2,

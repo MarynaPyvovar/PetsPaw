@@ -5,7 +5,7 @@
     padding: 4px;
     border-radius: 50px;
 
-    body.night-mode & {
+    .night-mode & {
         background: rgba(255, 255, 255, 0.05);
         padding-top: 9px;
     }
@@ -14,12 +14,12 @@
 .switcher__icon--nigth {
     display: none;
 
-    body.night-mode & {
+    .night-mode & {
         display: block;
     }
 }
 
-body.night-mode .switcher__icon--day {
+.night-mode .switcher__icon--day {
     display: none;
 }
 
