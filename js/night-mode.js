@@ -3,8 +3,6 @@ const refs = {
   body: document.body,
 };
 
-console.log(refs.toggleBtn);
-
 refs.toggleBtn.addEventListener('click', toggleMode);
 
 function toggleMode() {
