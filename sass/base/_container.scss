@@ -14,5 +14,7 @@
     @media screen and (min-width: $desktop) {
         padding-left: 147px;
         width: 1440px;
+        display: flex;
+        justify-content: space-between;
     }
 }

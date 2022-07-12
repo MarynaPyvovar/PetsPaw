@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <div class="container main__container">
-      <div class="main__container__content-wrapper">
+    <div class="container">
+      <div class="container__nav-wrapper">
         <header class="header">
           <a class="logo">
             <svg class="logo__icon" width="24" height="24">
@@ -38,17 +38,17 @@
             </div>
             <form>
               <input class="switcher__toggle visually-hidden" type="checkbox" id="toggle" />
-              <label for="toggle"></label>
+              <label class="switcher__label" for="toggle"></label>
             </form>
           </div>
         </header>
-        <main>
-          <h1 class="main-title">Hi intern!</h1>
-          <p class="greetings">Welcome to MI 2022 Front-end test</p>
-          <p class="secondary-title">Lets start using The Cat API</p>
-          <ul class="site-nav list">
+        <h1 class="main-title">Hi intern!</h1>
+        <p class="greetings">Welcome to MI 2022 Front-end test</p>
+        <p class="secondary-title">Lets start using The Cat API</p>
+        <nav>
+          <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="" class="site-nav__link link">
+              <a href="" class="site-nav__link">
                 <picture>
                   <source srcset="./images/vote-table.webp 1x, ./images/vote-table@2x.webp 2x" />
                   <source srcset="./images/vote-table.jpg 1x, ./images/vote-table@2x.jpg 2x" />
@@ -63,7 +63,7 @@
               </a>
             </li>
             <li class="site-nav__item">
-              <a href="" class="site-nav__link link">
+              <a href="" class="site-nav__link">
                 <picture>
                   <source srcset="./images/pet-breeds.webp 1x, ./images/pet-breeds@2x.webp 2x" />
                   <source srcset="./images/pet-breeds.jpg 1x, ./images/pet-breeds@2x.jpg 2x" />
@@ -78,7 +78,7 @@
               </a>
             </li>
             <li class="site-nav__item">
-              <a href="" class="site-nav__link link site-nav__current">
+              <a href="" class="site-nav__link site-nav__current">
                 <picture>
                   <source
                     srcset="./images/images-search.webp 1x, ./images/images-search@2x.webp 2x"
@@ -97,10 +97,60 @@
               </a>
             </li>
           </ul>
-        </main>
+        </nav>
       </div>
-      <div class="main__container__design-wrapper">
-        <div class="main__container__design-image"></div>
+      <div class="container__content-wrapper">
+        <div class="design-wrapper">
+          <div class="design-image"></div>
+        </div>
+        <div class="section-nav">
+          <button
+            class="section-nav__button menu-button"
+            data-menu-open
+            aria-controls="menu-container"
+            type="button"
+          >
+            <svg class="section-nav__search-icon" width="30" height="18">
+              <use href="./images/icons.svg#open-menu"></use>
+            </svg>
+          </button>
+          <form>
+            <label for="">
+              <input class="section-nav__search" type="text" />
+            </label>
+            <button class="section-nav__search-button" type="submit">
+              <svg class="section-nav__search-icon" width="20" height="20">
+                <use href="./images/icons.svg#search-20"></use>
+              </svg>
+            </button>
+          </form>
+          <ul class="section-nav__links">
+            <li>
+              <a href="" class="section-nav__button">
+                <svg class="section-nav__icon" width="30" height="30">
+                  <use href="./images/icons.svg#like-30"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="section-nav__button">
+                <svg class="section-nav__icon" width="30" height="30">
+                  <use href="./images/icons.svg#fav-30"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="section-nav__button">
+                <svg class="section-nav__icon" width="30" height="30">
+                  <use href="./images/icons.svg#dislike-30"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <section></section>
+        <section></section>
+        <section></section>
       </div>
     </div>
     <script src="./js/night-mode.js" type="module" async></script>

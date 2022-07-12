@@ -5,6 +5,8 @@
     --secondary-accent-color: #FBE0DC;
     --white-color: #ffffff;
     --background-items-color: #F8F8F7;
+    --dark-shady-color: rgba(255, 255, 255, 0.05);
+    --light-shady-color: rgba(255, 255, 255, 0.1);
 }
 
 @mixin font($fw, $fs, $lh) {

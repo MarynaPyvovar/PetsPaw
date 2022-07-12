@@ -7,11 +7,9 @@
     padding: 10px;
     
     .nigth-mode & {
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--light-shady-color);
     }
 }
-
-
 
 .site-nav__button {
     @include font(500, 12, 16);
@@ -24,12 +22,47 @@
         background-color: var(--secondary-accent-color);
     }
 
-    .site-nav__link:active & {
+    .site-nav__link.is-active & {
         color: var(--white-color);
         background-color: var(--main-accent-color);
     }
     
     @media screen and (min-width: $tablet) {
         margin-bottom: 0;
+    }
+}
+
+.menu-button {
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.section-nav__button {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    border-color: transparent;
+
+    .night-mode & {
+        background-color: var(--dark-shady-color);
+    }
+
+    &:hover {
+        background-color: var(--secondary-accent-color);
+    }
+
+    &.is-active {
+        background-color: var(--main-accent-color);
+    }
+}
+
+.section-nav__icon {
+    fill: var(--main-accent-color);
+
+    .section-nav__button.is-active & {
+        fill: var(--white-color);
     }
 }

@@ -1,7 +1,7 @@
-.main__container {
+.container__nav-wrapper {
     @media screen and (min-width: $desktop) {
-    display: flex;
-    justify-content: space-between;
+    position: sticky;
+    left: 0;
     }
 }
 
@@ -15,14 +15,6 @@
     justify-content: space-between;
     width: 73px;
     margin-left: auto;
-}
-
-.site-nav {
-    @media screen and (min-width: $tablet) {
-        width: 446px;
-        display: flex;
-        justify-content: space-between;
-    }
 }
 
 .main-title {
@@ -47,6 +39,14 @@
 
     .night-mode & {
         color: var(--white-color);
+    }
+}
+
+.site-nav {
+    @media screen and (min-width: $tablet) {
+        width: 446px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -77,40 +77,4 @@
 }
 .site-nav__image--gallery {
     background-color: #FFD280;
-}
-
-.main__container__design-wrapper {
-    display: none;
-
-    @media screen and (min-width: $desktop) {
-        display: block;
-        position: relative;
-        width: 680px;
-        height: 840px;
-        background-color: var(--secondary-accent-color);
-        border-radius: 20px;
-
-        .night-mode & {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-    }
-}
-
-.main__container__design-image {
-    position: absolute;
-    top: -90px;
-    right: -30px;
-    width: 775px;
-    height: 1024px;
-    background-image: url(/images/girl-and-pet.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image: url(/images/girl-and-pet@2x.png);
-    }
 }

@@ -1,0 +1,16 @@
+.section-nav {
+    display: flex;
+    align-items: center;
+}
+
+.section-nav__links {
+    display: flex;
+}
+
+.section-nav__search {
+    width: 470px;
+    height: 60px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    background-color: transparent;
+}

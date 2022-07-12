@@ -5,6 +5,8 @@
   --secondary-accent-color: #FBE0DC;
   --white-color: #ffffff;
   --background-items-color: #F8F8F7;
+  --dark-shady-color: rgba(255, 255, 255, 0.05);
+  --light-shady-color: rgba(255, 255, 255, 0.1);
 }
 
 .visually-hidden {
@@ -53,10 +55,9 @@ p {
 
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 img {
@@ -65,21 +66,10 @@ img {
   height: auto;
 }
 
-.list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.link {
+a {
   display: block;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.section {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 375px) {
@@ -100,6 +90,8 @@ img {
   .container {
     padding-left: 147px;
     width: 1440px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -146,14 +138,14 @@ img {
   display: none;
 }
 
-.switcher__toggle:checked + label {
+.switcher__toggle:checked + .switcher__label {
   background-color: rgba(255, 134, 142, 0.2);
 }
-.switcher__toggle:checked + label:before {
+.switcher__toggle:checked + .switcher__label:before {
   transform: translateX(20px);
 }
 
-label {
+.switcher__label {
   display: flex;
   width: 44px;
   height: 24px;
@@ -164,7 +156,7 @@ label {
   cursor: pointer;
   background-color: var(--secondary-accent-color);
 }
-label:before {
+.switcher__label:before {
   transition: transform 750ms ease;
   content: "";
   display: block;
@@ -186,7 +178,7 @@ label:before {
   padding: 10px;
 }
 .nigth-mode .button {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--light-shady-color);
 }
 
 .site-nav__button {
@@ -201,7 +193,7 @@ label:before {
 .site-nav__link:hover .site-nav__button {
   background-color: var(--secondary-accent-color);
 }
-.site-nav__link:active .site-nav__button {
+.site-nav__link.is-active .site-nav__button {
   color: var(--white-color);
   background-color: var(--main-accent-color);
 }
@@ -212,9 +204,57 @@ label:before {
 }
 
 @media screen and (min-width: 1440px) {
-  .main__container {
-    display: flex;
-    justify-content: space-between;
+  .menu-button {
+    display: none;
+  }
+}
+
+.section-nav__button {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+  border-color: transparent;
+}
+.night-mode .section-nav__button {
+  background-color: var(--dark-shady-color);
+}
+.section-nav__button:hover {
+  background-color: var(--secondary-accent-color);
+}
+.section-nav__button.is-active {
+  background-color: var(--main-accent-color);
+}
+
+.section-nav__icon {
+  fill: var(--main-accent-color);
+}
+.section-nav__button.is-active .section-nav__icon {
+  fill: var(--white-color);
+}
+
+.section-nav {
+  display: flex;
+  align-items: center;
+}
+
+.section-nav__links {
+  display: flex;
+}
+
+.section-nav__search {
+  width: 470px;
+  height: 60px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 1440px) {
+  .container__nav-wrapper {
+    position: sticky;
+    left: 0;
   }
 }
 
@@ -228,14 +268,6 @@ label:before {
   justify-content: space-between;
   width: 73px;
   margin-left: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav {
-    width: 446px;
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .main-title {
@@ -265,6 +297,14 @@ label:before {
 }
 .night-mode .secondary-title {
   color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    width: 446px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-nav__image {
@@ -297,24 +337,25 @@ label:before {
   background-color: #FFD280;
 }
 
-.main__container__design-wrapper {
+.design-wrapper {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  .main__container__design-wrapper {
+  .design-wrapper {
     display: block;
     position: relative;
     width: 680px;
     height: 840px;
+    margin-bottom: 100px;
     background-color: var(--secondary-accent-color);
     border-radius: 20px;
   }
-  .night-mode .main__container__design-wrapper {
+  .night-mode .design-wrapper {
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
-.main__container__design-image {
+.design-image {
   position: absolute;
   top: -90px;
   right: -30px;
@@ -326,7 +367,7 @@ label:before {
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .main__container__design-image {
+  .design-image {
     background-image: url(/images/girl-and-pet@2x.png);
   }
 }/*# sourceMappingURL=main.css.map */

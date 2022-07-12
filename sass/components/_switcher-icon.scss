@@ -25,7 +25,7 @@
 
 .switcher__toggle {
 
-    &:checked+label {
+    &:checked+.switcher__label {
         background-color: rgba(255, 134, 142, 0.2);
 
         &:before {
@@ -34,7 +34,7 @@
     }
 }
 
-label {
+.switcher__label {
     display: flex;
     width: 44px;
     height: 24px;
