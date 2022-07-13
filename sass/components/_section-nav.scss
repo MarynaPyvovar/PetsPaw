@@ -1,16 +1,93 @@
 .section-nav {
+    position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $desktop) {
+        justify-content: flex-end;
+    }
 }
 
 .section-nav__links {
     display: flex;
 }
 
-.section-nav__search {
-    width: 470px;
+.section-nav__search-form {
+    margin-top: 10px;
+
+    @media screen and (min-width: $tablet) {
+        position: absolute;
+        top: 0;
+        left: 70px;
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: 0;
+        left: 0;
+    }
+}
+
+.section-nav__search-label {
+    position: relative;
+}
+
+.section-nav__search-input {
+    width: 335px;
     height: 60px;
+    padding: 10px;
     background-color: var(--white-color);
+    border: 1px solid transparent;
     border-radius: 20px;
-    background-color: transparent;
+    border-color: transparent;
+
+    .night-mode & {
+        color: var(--white-color);
+        background-color: var(--dark-shady-color);
+    }
+
+    &:hover {
+        border-color: var(--secondary-accent-color);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: var(--main-accent-color);
+        &::placeholder {
+            color: var(--main-text-color);
+
+            .night-mode & {
+                color: var(--white-color);
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 340px;
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 470px;
+    }
+}
+
+.section-nav__search-button {
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: var(--secondary-accent-color);
+    border-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+
+    .night-mode & {
+        background-color: rgba(255, 134, 142, 0.2);
+    }
 }

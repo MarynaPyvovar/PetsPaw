@@ -32,16 +32,11 @@
     }
 }
 
-.menu-button {
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
-}
-
 .section-nav__button {
     width: 60px;
     height: 60px;
     padding: 15px;
+    margin-left: 10px;
     background-color: var(--white-color);
     border-radius: 20px;
     border-color: transparent;
