@@ -18,93 +18,17 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <div class="container">
-      <nav class="container mobile-menu-container is-open" data-menu id="mobile-menu-container">
-        <button type="button" class="mobile-menu-container__close-button" data-menu-close>
-          <svg width="25" height="25" aria-label="Close mobile-menu">
-            <use
-              class="site-nav__icon site-nav__icon--close-x"
-              href="./images/icons.svg#close-20"
-            ></use>
-          </svg>
-        </button>
-        <ul class="site-nav">
-          <li class="site-nav__item">
-            <a href="" class="site-nav__link">
-              <picture>
-                <source srcset="./images/vote-table.webp 1x, ./images/vote-table@2x.webp 2x" />
-                <source srcset="./images/vote-table.jpg 1x, ./images/vote-table@2x.jpg 2x" />
-                <img
-                  class="site-nav__image site-nav__image--voting"
-                  src="./images/vote-table.jpg "
-                  alt="Voting"
-                  width="138"
-                />
-              </picture>
-              <button class="site-nav__button button" type="button">Voting</button>
-            </a>
-          </li>
-          <li class="site-nav__item">
-            <a href="" class="site-nav__link">
-              <picture>
-                <source srcset="./images/pet-breeds.webp 1x, ./images/pet-breeds@2x.webp 2x" />
-                <source srcset="./images/pet-breeds.jpg 1x, ./images/pet-breeds@2x.jpg 2x" />
-                <img
-                  class="site-nav__image site-nav__image--breed"
-                  src="./images/pet-breeds.jpg "
-                  alt="Breed"
-                  width="138"
-                />
-              </picture>
-              <button class="site-nav__button button" type="button">Breed</button>
-            </a>
-          </li>
-          <li class="site-nav__item">
-            <a href="" class="site-nav__link site-nav__current">
-              <picture>
-                <source
-                  srcset="./images/images-search.webp 1x, ./images/images-search@2x.webp 2x"
-                />
-                <source srcset="./images/images-search.jpg 1x, ./images/images-search@2x.jpg 2x" />
-                <img
-                  class="site-nav__image site-nav__image--gallery"
-                  src="./images/images-search.jpg "
-                  alt="Gallery"
-                  width="138"
-                />
-              </picture>
-              <button class="site-nav__button button" type="button">Gallery</button>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="container__nav-wrapper">
-        <header class="header">
-          <a class="logo">
-            <svg class="logo__icon" width="24" height="24">
-              <use href="./images/icons.svg#paw-logo"></use>
+    <main>
+      <div class="container">
+        <nav class="container mobile-menu-container" data-menu id="mobile-menu-container">
+          <button type="button" class="mobile-menu-container__close-button button" data-menu-close>
+            <svg width="25" height="25" aria-label="Close mobile-menu">
+              <use
+                class="site-nav__icon site-nav__icon--close-x"
+                href="./images/icons.svg#close-20"
+              ></use>
             </svg>
-            <span class="logo__text">PetsPaw</span>
-          </a>
-          <div class="switcher">
-            <div class="switcher__icon">
-              <svg class="switcher__icon--day" width="16" height="16">
-                <use href="./images/icons.svg#day-mode-icon"></use>
-              </svg>
-              <svg class="switcher__icon--nigth" width="16" height="16">
-                <use href="./images/icons.svg#night-mode-icon"></use>
-              </svg>
-            </div>
-            <form>
-              <input class="switcher__toggle visually-hidden" type="checkbox" id="toggle" />
-              <label class="switcher__label" for="toggle"></label>
-            </form>
-          </div>
-        </header>
-        <h1 class="main-title">Hi intern!</h1>
-        <p class="greetings">Welcome to MI 2022 Front-end test</p>
-        <p class="secondary-title">Lets start using The Cat API</p>
-        <nav>
+          </button>
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="" class="site-nav__link">
@@ -157,75 +81,239 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="container__content-wrapper">
-        <div class="design-wrapper">
-          <div class="design-image"></div>
+        <div class="container__nav-wrapper">
+          <header class="header">
+            <a class="logo">
+              <svg class="logo__icon" width="24" height="24">
+                <use href="./images/icons.svg#paw-logo"></use>
+              </svg>
+              <span class="logo__text">PetsPaw</span>
+            </a>
+            <div class="switcher">
+              <div class="switcher__icon">
+                <svg class="switcher__icon--day" width="16" height="16">
+                  <use href="./images/icons.svg#day-mode-icon"></use>
+                </svg>
+                <svg class="switcher__icon--nigth" width="16" height="16">
+                  <use href="./images/icons.svg#night-mode-icon"></use>
+                </svg>
+              </div>
+              <form>
+                <input class="switcher__toggle visually-hidden" type="checkbox" id="toggle" />
+                <label class="switcher__label" for="toggle"></label>
+              </form>
+            </div>
+          </header>
+          <h1 class="main-title">Hi intern!</h1>
+          <p class="greetings">Welcome to MI 2022 Front-end test</p>
+          <p class="secondary-title">Lets start using The Cat API</p>
+          <nav>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">
+                  <picture>
+                    <source srcset="./images/vote-table.webp 1x, ./images/vote-table@2x.webp 2x" />
+                    <source srcset="./images/vote-table.jpg 1x, ./images/vote-table@2x.jpg 2x" />
+                    <img
+                      class="site-nav__image site-nav__image--voting"
+                      src="./images/vote-table.jpg "
+                      alt="Voting"
+                      width="138"
+                    />
+                  </picture>
+                  <button class="site-nav__button button" type="button">Voting</button>
+                </a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">
+                  <picture>
+                    <source srcset="./images/pet-breeds.webp 1x, ./images/pet-breeds@2x.webp 2x" />
+                    <source srcset="./images/pet-breeds.jpg 1x, ./images/pet-breeds@2x.jpg 2x" />
+                    <img
+                      class="site-nav__image site-nav__image--breed"
+                      src="./images/pet-breeds.jpg "
+                      alt="Breed"
+                      width="138"
+                    />
+                  </picture>
+                  <button class="site-nav__button button" type="button">Breed</button>
+                </a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link site-nav__current">
+                  <picture>
+                    <source
+                      srcset="./images/images-search.webp 1x, ./images/images-search@2x.webp 2x"
+                    />
+                    <source
+                      srcset="./images/images-search.jpg 1x, ./images/images-search@2x.jpg 2x"
+                    />
+                    <img
+                      class="site-nav__image site-nav__image--gallery"
+                      src="./images/images-search.jpg "
+                      alt="Gallery"
+                      width="138"
+                    />
+                  </picture>
+                  <button class="site-nav__button button" type="button">Gallery</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="section-nav">
-          <button
-            class="section-nav__button mobile-menu__open-button"
-            data-menu-open
-            aria-controls="menu-container"
-            type="button"
-          >
-            <svg
-              class="section-nav__search-icon"
-              width="30"
-              height="18"
-              aria-label="Open mobile-menu"
+        <div class="container__content-wrapper">
+          <div class="design-wrapper">
+            <div class="design-image"></div>
+          </div>
+          <div class="section-nav">
+            <button
+              class="section-nav__button mobile-menu__open-button button"
+              data-menu-open
+              aria-controls="menu-container"
+              type="button"
             >
-              <use href="./images/icons.svg#open-menu"></use>
-            </svg>
-          </button>
-          <ul class="section-nav__links">
-            <li>
-              <a href="" class="section-nav__button">
-                <svg class="section-nav__icon" width="30" height="30">
-                  <use href="./images/icons.svg#like-30"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="section-nav__button">
-                <svg class="section-nav__icon" width="30" height="30">
-                  <use href="./images/icons.svg#fav-30"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="section-nav__button">
-                <svg class="section-nav__icon" width="30" height="30">
-                  <use href="./images/icons.svg#dislike-30"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <form class="section-nav__search-form">
-            <label for="search-input" class="section-nav__search-label">
-              <input
-                class="section-nav__search-input"
-                type="text"
-                name="search-input"
-                id="search-input"
-                placeholder="Search for breeds by name"
-              />
-              <button class="section-nav__search-button" type="submit">
+              <svg
+                class="section-nav__search-icon"
+                width="30"
+                height="18"
+                aria-label="Open mobile-menu"
+              >
+                <use href="./images/icons.svg#open-menu"></use>
+              </svg>
+            </button>
+            <ul class="section-nav__links">
+              <li>
+                <a href="" class="section-nav__button button">
+                  <svg class="section-nav__icon" width="30" height="30">
+                    <use href="./images/icons.svg#like-30"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="section-nav__button button">
+                  <svg class="section-nav__icon" width="30" height="30">
+                    <use href="./images/icons.svg#fav-30"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="section-nav__button button">
+                  <svg class="section-nav__icon" width="30" height="30">
+                    <use href="./images/icons.svg#dislike-30"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <form class="section-nav__search-form">
+              <label for="search-input" class="section-nav__search-label">
+                <input
+                  class="section-nav__search-input"
+                  type="text"
+                  name="search-input"
+                  id="search-input"
+                  placeholder="Search for breeds by name"
+                />
+                <button class="section-nav__search-button button" type="submit">
+                  <svg class="section-nav__search-icon" width="20" height="20">
+                    <use href="./images/icons.svg#search-20"></use>
+                  </svg>
+                </button>
+              </label>
+            </form>
+          </div>
+          <section class="section voting">
+            <button class="back-button button" type="button">
+              <svg width="20" height="20">
+                <use href="./images/icons.svg#back-20"></use>
+              </svg>
+            </button>
+            <h2 class="section__name">Voting</h2>
+            <img src="" alt="" />
+            <ul class="voting__actions">
+              <li>
+                <button class="voting__action button" type="button">
+                  <svg width="20" height="20">
+                    <use href="./images/icons.svg#like-30"></use>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="voting__action button" type="button">
+                  <svg width="20" height="20">
+                    <use href="./images/icons.svg#fav-30"></use>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="voting__action button" type="button">
+                  <svg class="section-nav__search-icon" width="20" height="20">
+                    <use href="./images/icons.svg#dislike-30"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <section class="section breeds">
+            <button class="back-button button" type="button">
+              <svg class="section-nav__search-icon" width="20" height="20">
+                <use href="./images/icons.svg#back-20"></use>
+              </svg>
+            </button>
+            <h2 class="section__name">Breeds</h2>
+            <form action=""><input type="text" /></form>
+            <form action=""><input type="text" /></form>
+            <button type="button">
+              <svg class="section-nav__search-icon" width="20" height="20">
+                <use href="./images/icons.svg#sort-20"></use>
+              </svg>
+            </button>
+            <button type="button">
+              <svg class="section-nav__search-icon" width="20" height="20">
+                <use href="./images/icons.svg#sort-revers-20"></use>
+              </svg>
+            </button>
+            <ul>
+              <li>
+                <img src="" alt="" />
+              </li>
+            </ul>
+          </section>
+          <section class="section gallery">
+            <button class="back-button button" type="button">
+              <svg class="section-nav__search-icon" width="20" height="20">
+                <use href="./images/icons.svg#back-20"></use>
+              </svg>
+            </button>
+            <h2 class="section__name">Gallery</h2>
+            <button type="button">
+              <svg class="section-nav__search-icon" width="20" height="20">
+                <use href="./images/icons.svg#upload-16"></use>
+              </svg>
+              <span>Upload</span>
+            </button>
+            <form action="">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+              <button type="button">
                 <svg class="section-nav__search-icon" width="20" height="20">
-                  <use href="./images/icons.svg#search-20"></use>
+                  <use href="./images/icons.svg#update-20"></use>
                 </svg>
               </button>
-            </label>
-          </form>
+            </form>
+            <ul>
+              <li>
+                <img src="" alt="" />
+              </li>
+            </ul>
+          </section>
         </div>
-        <section></section>
-        <section></section>
-        <section></section>
       </div>
-    </div>
+    </main>
     <script src="./js/night-mode.js" type="module" async></script>
+    <script src="./js/mobile-menu.js" type="module" async></script>
     <!-- <script src="./js/is-active.js" type="module" async></script> -->
     <!-- <script src="./js/modal.js" type="module" async></script> -->
-    <script src="./js/mobile-menu.js" type="module" async></script>
   </body>
 </html>

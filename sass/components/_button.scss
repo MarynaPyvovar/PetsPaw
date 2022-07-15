@@ -1,22 +1,24 @@
 .button {
-    text-align: center;
-    letter-spacing: 2px;
-    color: var(--main-accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-color: transparent;
     border-radius: 10px;
-    padding: 10px;
-    
-    .nigth-mode & {
-        background: var(--light-shady-color);
-    }
 }
 
 .site-nav__button {
     @include font(500, 12, 16);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     width: 100%;
     height: 36px;
+    color: var(--main-accent-color);
     background-color: var(--white-color);
     margin-bottom: 20px;
+
+    .nigth-mode & {
+            background: var(--light-shady-color);
+        }
 
     .site-nav__link:hover &{
         background-color: var(--secondary-accent-color);
@@ -35,11 +37,9 @@
 .section-nav__button {
     width: 60px;
     height: 60px;
-    padding: 15px;
     margin-left: 10px;
     background-color: var(--white-color);
     border-radius: 20px;
-    border-color: transparent;
 
     .night-mode & {
         background-color: var(--dark-shady-color);
@@ -61,3 +61,29 @@
         fill: var(--white-color);
     }
 }
+
+.section-nav__search-button {
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-accent-color);
+    cursor: pointer;
+
+    .night-mode & {
+        background-color: rgba(255, 134, 142, 0.2);
+    }
+}
+
+.back-button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-accent-color);
+    cursor: pointer;
+
+    .night-mode & {
+        background-color: rgba(255, 134, 142, 0.2);
+    }
+}
+
