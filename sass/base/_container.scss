@@ -25,5 +25,8 @@
     padding: 20px;
     background-color: var(--white-color);
     border-radius: 20px;
-    overflow-y: scroll;
+
+    .night-mode & {
+        background-color: var(--dark-shady-color);
+    }
 }

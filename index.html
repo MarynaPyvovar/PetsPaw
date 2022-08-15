@@ -222,36 +222,41 @@
             </form>
           </div>
           <section class="section voting">
-            <button class="back-button button" type="button">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#back-20"></use>
-              </svg>
-            </button>
-            <h2 class="section__name">Voting</h2>
-            <img src="" alt="" />
-            <ul class="voting__actions">
-              <li>
-                <button class="voting__action button" type="button">
-                  <svg width="20" height="20">
-                    <use href="./images/icons.svg#like-30"></use>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button class="voting__action button" type="button">
-                  <svg width="20" height="20">
-                    <use href="./images/icons.svg#fav-30"></use>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button class="voting__action button" type="button">
-                  <svg class="section-nav__search-icon" width="20" height="20">
-                    <use href="./images/icons.svg#dislike-30"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
+            <div class="voting__header">
+              <button class="back-button button" type="button">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#back-20"></use>
+                </svg>
+              </button>
+              <h2 class="section__name">Voting</h2>
+            </div>
+            <div class="voting__image">
+              <img src="./images/image 1.jpg" alt="cat" />
+              <ul class="voting__actions">
+                <li>
+                  <button class="voting__action voting__action--like button" type="button">
+                    <svg class="voting__icon" width="30" height="30">
+                      <use href="./images/icons.svg#like-30"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="voting__action voting__action--fav button" type="button">
+                    <svg class="voting__icon" width="30" height="30">
+                      <use href="./images/icons.svg#fav-30"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="voting__action voting__action--dislike button" type="button">
+                    <svg class="voting__icon" width="30" height="30">
+                      <use href="./images/icons.svg#dislike-30"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="voting__logs"></div>
           </section>
           <section class="section breeds">
             <button class="back-button button" type="button">
@@ -313,7 +318,7 @@
     </main>
     <script src="./js/night-mode.js" type="module" async></script>
     <script src="./js/mobile-menu.js" type="module" async></script>
-    <!-- <script src="./js/is-active.js" type="module" async></script> -->
+    <script src="./js/voting.js" type="module" async></script>
     <!-- <script src="./js/modal.js" type="module" async></script> -->
   </body>
 </html>

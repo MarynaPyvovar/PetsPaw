@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     border-color: transparent;
-    border-radius: 10px;
 }
 
 .site-nav__button {
@@ -14,6 +13,7 @@
     height: 36px;
     color: var(--main-accent-color);
     background-color: var(--white-color);
+    border-radius: 10px;
     margin-bottom: 20px;
 
     .nigth-mode & {
@@ -79,7 +79,9 @@
 .back-button {
     width: 40px;
     height: 40px;
+    margin-right: 10px;
     background-color: var(--secondary-accent-color);
+    border-radius: 10px;
     cursor: pointer;
 
     .night-mode & {
