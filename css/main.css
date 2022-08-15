@@ -523,14 +523,14 @@ a {
   right: -30px;
   width: 775px;
   height: 1024px;
-  background-image: url(/images/girl-and-pet.png);
+  background-image: url("../images/girl-and-pet.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .design-image {
-    background-image: url(/images/girl-and-pet@2x.png);
+    background-image: url("../images/girl-and-pet@2x.png");
   }
 }
 
