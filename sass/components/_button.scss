@@ -89,3 +89,24 @@
     }
 }
 
+.breeds__sort-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+
+    &:hover {
+        border: 2px solid var(--secondary-accent-color);
+
+        & .breeds__sort-icon {
+            fill: var(--main-accent-color);
+        }
+    }
+
+    .night-mode & {
+        background-color: var(--light-shady-color);
+
+        &:hover {
+            border: 2px solid rgba(255, 134, 142, 0.2);
+        }
+    }
+}
