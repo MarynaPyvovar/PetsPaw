@@ -1,7 +1,12 @@
 .container__nav-wrapper {
+    @media screen and (min-width: $tablet) {
+        padding: 0 117px;
+    }
+
     @media screen and (min-width: $desktop) {
-    position: sticky;
-    left: 0;
+        padding: 0;
+    // position: sticky;
+    // left: 0;
     }
 }
 

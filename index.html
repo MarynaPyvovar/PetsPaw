@@ -266,8 +266,17 @@
                 </svg>
               </button>
               <h2 class="section__name">Breeds</h2>
-              <!-- <form action=""><input type="text" /></form>
-              <form action=""><input type="text" /></form> -->
+              <select
+                class="breeds__markup"
+                id="breeds-from-API"
+                name="breeds-name"
+                placeholder="All breeds"
+              >
+                <!-- <option value=""></option> -->
+              </select>
+              <select class="breeds__limit-items" id="limit-for-items-greed" name="limit-number">
+                <!-- <option value=""></option> -->
+              </select>
               <button type="button" class="breeds__sort-btn button">
                 <svg class="breeds__sort-icon" width="20" height="20">
                   <use href="./images/icons.svg#sort-20"></use>
@@ -279,10 +288,22 @@
                 </svg>
               </button>
             </div>
-            <ul class="breeds__list">
-              <!-- <li>
-                <img src="" alt="" />
-              </li> -->
+            <ul class="breeds__list grid">
+              <li>
+                <img src="./images/images-search.webp" alt="" />
+              </li>
+              <li>
+                <img src="./images/pet-breeds.webp" alt="" />
+              </li>
+              <li>
+                <img src="./images/vote-table.webp" alt="" />
+              </li>
+              <li>
+                <img src="./images/image 1.jpg" alt="" />
+              </li>
+              <li>
+                <img src="./images/images-search.webp" alt="" />
+              </li>
             </ul>
           </section>
           <section class="section gallery">

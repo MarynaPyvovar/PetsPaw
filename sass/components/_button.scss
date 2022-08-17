@@ -94,6 +94,16 @@
     height: 40px;
     border-radius: 10px;
 
+    &:not(:last-child) {
+        margin-right: 10px;
+
+        @media screen and (min-width: $tablet) {
+            & {
+                margin-right: 0;
+            }
+        }
+    }
+
     &:hover {
         border: 2px solid var(--secondary-accent-color);
 
