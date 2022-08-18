@@ -6,7 +6,7 @@
     color: var(--white-color);
     background-color: var(--main-accent-color);
     
-    width: 156px;
+    width: 146px;
     height: 40px;
     padding: 5px 10px;
     border-radius: 10px;
@@ -17,8 +17,10 @@
     margin-bottom: 20px;
 }
 
-.voting__image {
+.voting__image-wrapper {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-bottom: 45px;
 

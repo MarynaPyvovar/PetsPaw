@@ -224,14 +224,14 @@
           <section class="section voting">
             <div class="voting__header">
               <button class="back-button button" type="button">
-                <svg width="20" height="20">
+                <svg width="20" height="20" class="back-button-icon">
                   <use href="./images/icons.svg#back-20"></use>
                 </svg>
               </button>
               <h2 class="section__name">Voting</h2>
             </div>
-            <div class="voting__image">
-              <img src="./images/image 1.jpg" alt="cat" />
+            <div class="voting__image-wrapper">
+              <img src="./images/image 1.jpg" alt="cat" max-width="668" />
               <ul class="voting__actions">
                 <li>
                   <button class="voting__action voting__action--like button" type="button">
@@ -261,20 +261,25 @@
           <section class="section breeds">
             <div class="breeds__header">
               <button class="back-button button" type="button">
-                <svg class="section-nav__search-icon" width="20" height="20">
+                <svg class="section-nav__search-icon back-button-icon" width="20" height="20">
                   <use href="./images/icons.svg#back-20"></use>
                 </svg>
               </button>
               <h2 class="section__name">Breeds</h2>
+              <p class="breeds__selected-id section__name">(id)</p>
               <select
-                class="breeds__markup"
+                class="breeds__markup select"
                 id="breeds-from-API"
                 name="breeds-name"
                 placeholder="All breeds"
               >
                 <!-- <option value=""></option> -->
               </select>
-              <select class="breeds__limit-items" id="limit-for-items-greed" name="limit-number">
+              <select
+                class="breeds__limit-items select"
+                id="limit-for-items-greed"
+                name="limit-number"
+              >
                 <!-- <option value=""></option> -->
               </select>
               <button type="button" class="breeds__sort-btn button">
@@ -307,38 +312,97 @@
             </ul>
           </section>
           <section class="section gallery">
-            <button class="back-button button" type="button">
-              <svg class="section-nav__search-icon" width="20" height="20">
-                <use href="./images/icons.svg#back-20"></use>
-              </svg>
-            </button>
-            <h2 class="section__name">Gallery</h2>
-            <button type="button">
-              <svg class="section-nav__search-icon" width="20" height="20">
-                <use href="./images/icons.svg#upload-16"></use>
-              </svg>
-              <span>Upload</span>
-            </button>
-            <form action="">
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
-              <button type="button">
-                <svg class="section-nav__search-icon" width="20" height="20">
-                  <use href="./images/icons.svg#update-20"></use>
+            <div class="gallery__header">
+              <button class="back-button button" type="button">
+                <svg class="section-nav__search-icon back-button-icon" width="20" height="20">
+                  <use href="./images/icons.svg#back-20"></use>
                 </svg>
               </button>
-            </form>
-            <ul>
+              <h2 class="section__name">Gallery</h2>
+              <button type="button" class="gallery__upload-btn button">
+                <svg class="gallery__upload-icon" width="20" height="20">
+                  <use href="./images/icons.svg#upload-16"></use>
+                </svg>
+                <span data-modal-open class="gallery__upload-text">Upload</span>
+              </button>
+            </div>
+            <div class="gallery__search">
+              <div>
+                <label for="order">Order</label>
+                <select class="select" name="" id="order"></select>
+              </div>
+              <div>
+                <label for="type">Type</label>
+                <select class="select" name="" id="type"></select>
+              </div>
+              <div>
+                <label for="breed">Breed</label>
+                <select class="select" name="" id="breed"></select>
+              </div>
+              <div class="gallery__search--decor">
+                <div class="gallery__search--decor-div">
+                  <label for="limit">Limit</label>
+                  <select class="select" name="" id="limit"></select>
+                </div>
+                <button type="button" class="gallery__update-btn button">
+                  <svg class="section-nav__search-icon" width="20" height="20">
+                    <use href="./images/icons.svg#update-20"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <ul class="breeds__list grid">
               <li>
-                <img src="" alt="" />
+                <img src="./images/images-search.webp" alt="" />
+              </li>
+              <li>
+                <img src="./images/pet-breeds.webp" alt="" />
+              </li>
+              <li>
+                <img src="./images/vote-table.webp" alt="" />
+              </li>
+              <li>
+                <img src="./images/image 1.jpg" alt="" />
+              </li>
+              <li>
+                <img src="./images/images-search.webp" alt="" />
               </li>
             </ul>
           </section>
         </div>
       </div>
     </main>
+    <div data-modal class="backdrop">
+      <div class="modal">
+        <button data-modal-close class="modal__close-btn button" type="button">
+          <svg class="" width="20" height="20">
+            <use href="./images/icons.svg#close-20"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title">Upload a .jpg or .png Cat Image</h2>
+        <p class="modal__policy">
+          Any uploads must comply with the
+          <a class="modal__policy-link" href="https://thecatapi.com/privacy">upload guidelines</a>
+          or face deletion.
+        </p>
+        <div class="modal__upload-area">
+          <p class="modal__upload-">Drag here your file or Click here to upload</p>
+        </div>
+        <p class="modal__error">No file selected</p>
+        <p class="modal__success">Image File Name: (file-name.jpg))</p>
+        <button class="modal__submit-btn" type="">UPLOAD PHOTO</button>
+        <div>
+          <svg class="section-nav__search-icon" width="20" height="20">
+            <use href="./images/icons.svg#success-20"></use>
+          </svg>
+          <p>Thanks for the Upload - Cat found!</p>
+          <svg class="section-nav__search-icon" width="20" height="20">
+            <use href="./images/icons.svg#error-20"></use>
+          </svg>
+          <p>No Cat found - try a different one</p>
+        </div>
+      </div>
+    </div>
     <script src="./js/night-mode.js" type="module" async></script>
     <script src="./js/mobile-menu.js" type="module" async></script>
     <script src="./js/voting.js" type="module" async></script>

@@ -4,7 +4,6 @@
         padding: 20px;
         margin-left: auto;
         margin-right: auto;
-        // width: $mobile;
     }
 
     @media screen and (min-width: $tablet) {
@@ -21,11 +20,19 @@
 }
 
 .section {
+    width: 100%;
     padding: 20px;
     background-color: var(--white-color);
     border-radius: 20px;
 
     .night-mode & {
         background-color: var(--dark-shady-color);
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 708px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 680px;
     }
 }

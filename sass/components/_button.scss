@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     border-color: transparent;
+    cursor: pointer;
 }
 
 .site-nav__button {
@@ -76,13 +77,23 @@
     }
 }
 
+.back-button-icon {
+    fill: var(--main-accent-color);
+}
 .back-button {
     width: 40px;
     height: 40px;
     margin-right: 10px;
     background-color: var(--secondary-accent-color);
     border-radius: 10px;
-    cursor: pointer;
+
+    &:hover {
+        background-color: var(--main-accent-color);
+
+        & .back-button-icon {
+            fill: var(--white-color);
+        }
+    }
 
     .night-mode & {
         background-color: rgba(255, 134, 142, 0.2);
@@ -118,5 +129,70 @@
         &:hover {
             border: 2px solid rgba(255, 134, 142, 0.2);
         }
+    }
+}
+
+.section-nav__search-icon {
+    fill: var(--main-accent-color);
+}
+.gallery__update-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: var(--white-color);
+    
+    .night-mode & {
+        background-color: var(--main-text-color);
+    }
+
+    &:hover {
+        background-color: var(--main-accent-color);
+    
+        & .section-nav__search-icon {
+            fill: var(--white-color);
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 40px;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}
+
+.gallery__upload-icon {
+    fill: var(--main-accent-color);
+    margin-right: 10px;
+}
+.gallery__upload-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 12px 20px;
+    @include font(500, 12, 16);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--main-accent-color);
+    background-color: var(--secondary-accent-color);
+    border-radius: 10px;
+
+    .night-mode & {
+        background-color: rgba(255, 134, 142, 0.2);;
+    }
+
+    &:hover {
+        color: var(--white-color);
+        background-color: var(--main-accent-color);
+
+        & .gallery__upload-icon {
+            fill: var(--white-color);
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 143px;
+        margin-left: auto;
+        margin-top: 0;
     }
 }

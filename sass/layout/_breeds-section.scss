@@ -5,32 +5,20 @@
 
     @media screen and (min-width: $tablet) {
     justify-content: space-between;
+    flex-wrap: nowrap;
+    }
+
+    & .back-button {
+        margin-right: 0;
     }
 }
 
-.breeds__markup {
-    @include font(400, 16, 24);
-    width: 295px;
-    height: 40px;
-    margin: 10px 0;
-    background-color: var(--background-items-color);
-    border-color: transparent;
-    border-radius: 10px;
-
-    &:hover {
-        border: 2px solid var(--secondary-accent-color);
-    }
-
-    @media screen and (min-width: $tablet) {
-        width: 226px;
-        margin: 0;
-    }
+.breeds__selected-id {
+    display: none;
 }
 
-.breeds__limit-items {
-    width: 185px;
+.select {
     height: 40px;
-    margin-right: 10px;
     background-color: var(--background-items-color);
     border-color: transparent;
     border-radius: 10px;
@@ -39,20 +27,53 @@
         border: 2px solid var(--secondary-accent-color);
     }
 
+    &:focus, &:active {
+        border: 2px solid var(--main-accent-color);
+    }
+
+    .night-mode & {
+        color: var(--white-color);
+        background-color: var(--main-text-color);
+    }
+}
+
+.breeds__markup {
+    @include font(400, 16, 24);
+    width: 100%;
+    margin: 10px 0;
+
+    @media screen and (min-width: $tablet) {
+        width: 226px;
+        margin: 0;
+    }
+
+    .night-mode & {
+        background-color: var(--dark-shady-color);
+
+        &:hover {
+            border-color: rgba(255, 134, 142, 0.2);
+        }
+    }
+}
+
+.breeds__limit-items {
+    width: 185px;
+    margin-right: 10px;
+
     @media screen and (min-width: $tablet) {
         width: 101px;
         margin-right: 0;
+    }
+
+    .night-mode & {
+        background-color: var(--dark-shady-color);
+
+        &:hover {
+            border-color: rgba(255, 134, 142, 0.2);
+        }
     }
 }
 
 .breeds__sort-icon {
     fill: var(--secondary-text-color);
-}
-
-.grid {
-    @media screen and (min-width: $tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    }
 }
